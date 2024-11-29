@@ -14,7 +14,8 @@ const greetings = [
     "「嗨，别来无恙啊。」",
     "「有朋自远方来，不亦说乎？」",
     "「山有木兮木有枝，心悦君兮君不知。」",
-    "「海内存知己，天涯若比邻。」"
+    "「海内存知己，天涯若比邻。」",
+    "「花径不曾缘客扫，蓬门今始为君开。」"
 ]
 
 const farewells = [
@@ -148,13 +149,13 @@ export function EnhancedHomepage() {
                                         transition={{ duration: 0.5 }}
                                         style={{ textShadow: '0 0 15px rgba(255,255,255,0.6)' }}
                                     >
-                                        「欲识吾乎？」
+                                        「闲坐小窗读周易，不知春去几多时。」
                                     </motion.h2>
                                     <motion.p
                                         className={`${largeNoWrapClass} mb-4`}
                                         style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
                                     >
-                                        尔何不自观之？
+                                        我的一些学习成果
                                     </motion.p>
                                     <motion.div
                                         className="flex flex-col justify-center space-y-4 w-full"
@@ -185,7 +186,7 @@ export function EnhancedHomepage() {
                                 transition={{ duration: 0.5 }}
                                 style={{ textShadow: '0 0 15px rgba(255,255,255,0.6)' }}
                             >
-                                「欲与吾共游乎？」
+                                「人生得意须尽欢，莫使金樽空对月。」
                             </motion.h2>
                             {showSecondLine && (
                                 <motion.div
