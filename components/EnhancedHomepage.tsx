@@ -73,7 +73,7 @@ export function EnhancedHomepage() {
         >
             {/* Snowfall Component */}
             <Snowfall />
-            
+
             <AnimatePresence mode='wait'>
                 <motion.div
                     key={currentPage}
@@ -91,7 +91,7 @@ export function EnhancedHomepage() {
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1, duration: 0.5 }}
-                                style={{ textShadow: '0 0 20px rgba(255,255,255,0.7)' }}
+                                style={{ textShadow: '0 0 30px rgba(255,255,255,0.7)' }}
                             >
                                 {greeting}
                             </motion.h1>
@@ -116,7 +116,7 @@ export function EnhancedHomepage() {
                                 initial={{ opacity: 0, x: -50, rotate: -10 }}
                                 animate={{ opacity: 1, x: 0, rotate: 0 }}
                                 transition={{ duration: 0.5 }}
-                                style={{ textShadow: '0 0 15px rgba(255,255,255,0.6)' }}
+                                style={{ textShadow: '0 0 30px rgba(255,255,255,0.6)' }}
                             >
                                 「见字如面，吾念君安。」
                             </motion.h2>
@@ -147,7 +147,7 @@ export function EnhancedHomepage() {
                                         initial={{ opacity: 0, scale: 1.5, rotate: -10 }}
                                         animate={{ opacity: 1, scale: 1, rotate: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        style={{ textShadow: '0 0 15px rgba(255,255,255,0.6)' }}
+                                        style={{ textShadow: '0 0 30px rgba(255,255,255,0.6)' }}
                                     >
                                         「闲坐小窗读周易，不知春去几多时。」
                                     </motion.h2>
@@ -155,7 +155,7 @@ export function EnhancedHomepage() {
                                         className={`${largeNoWrapClass} mb-4`}
                                         style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
                                     >
-                                        我的一些学习成果
+                                        一些学习成果
                                     </motion.p>
                                     <motion.div
                                         className="flex flex-col justify-center space-y-4 w-full"
@@ -184,7 +184,7 @@ export function EnhancedHomepage() {
                                 initial={{ opacity: 0, scale: 0.5, rotate: 20 }}
                                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                                 transition={{ duration: 0.5 }}
-                                style={{ textShadow: '0 0 15px rgba(255,255,255,0.6)' }}
+                                style={{ textShadow: '0 0 30px rgba(255,255,255,0.6)' }}
                             >
                                 「人生得意须尽欢，莫使金樽空对月。」
                             </motion.h2>
@@ -211,7 +211,7 @@ export function EnhancedHomepage() {
                         >
                             <h2
                                 className={`${noWrapClass} font-semibold mb-8`}
-                                style={{ textShadow: '0 0 15px rgba(255,255,255,0.6)' }}
+                                style={{ textShadow: '0 0 30px rgba(255,255,255,0.6)' }}
                             >
                                 {farewell}
                             </h2>
