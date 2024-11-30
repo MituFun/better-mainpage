@@ -31,7 +31,7 @@ const studys = [
 
 const tools = [
     "「工欲善其事，必先利其器。」",
-    "「善用者，事半功倍；不善用者，事倍功半。」"
+    "「得其法者事半功倍，不得其法者事倍功半。」"
 ]
 
 export function EnhancedHomepage() {
@@ -201,7 +201,7 @@ export function EnhancedHomepage() {
                                 transition={{ duration: 0.5 }}
                                 style={{ textShadow: '0 0 30px rgba(255,255,255,0.6)' }}
                             >
-                                「逍遥乎天地之间，而心意自得。」
+                                「逍遥于天地之间，而心意自得。」
                             </motion.h2>
                             {showSecondLine && (
                                 <motion.div
