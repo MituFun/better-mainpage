@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Github, Globe, Gamepad2, ChevronDown, BookOpenText } from 'lucide-react'
+import { Github, Globe, Box, ChevronDown, BookOpenText } from 'lucide-react'
 import Link from 'next/link'
 import Snowfall from 'react-snowfall'  // Import the snowfall package
 
@@ -209,7 +209,7 @@ export function EnhancedHomepage() {
                                     transition={{ duration: 0.5, delay: 0.25 }}
                                 >
                                     <Link href="https://yuxincraft.mitufun.top/" className={`flex items-center justify-center space-x-2 text-green-400 hover:text-green-300 transition-colors ${largeNoWrapClass}`}>
-                                        <Gamepad2 size={16} />
+                                        <Box size={16} />
                                         <span>我的 Minecraft Server</span>
                                     </Link>
                                 </motion.div>
