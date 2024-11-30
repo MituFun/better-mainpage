@@ -86,6 +86,7 @@ export function EnhancedHomepage() {
             onClick={nextPage}
         >
             <script defer src="https://admin.mitufun.top/script.js" data-website-id="f936b4d2-049c-4cdd-b7b3-ff77b13de782"></script>
+            <script defer src="./click.js"></script>
             {/* Snowfall Component */}
             <Snowfall />
             <AnimatePresence mode='wait'>
