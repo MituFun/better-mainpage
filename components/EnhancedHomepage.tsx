@@ -71,9 +71,9 @@ export function EnhancedHomepage() {
             className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 p-4 overflow-hidden"
             onClick={nextPage}
         >
+            <script defer src="https://admin.mitufun.top/script.js" data-website-id="f936b4d2-049c-4cdd-b7b3-ff77b13de782"></script>
             {/* Snowfall Component */}
             <Snowfall />
-
             <AnimatePresence mode='wait'>
                 <motion.div
                     key={currentPage}
