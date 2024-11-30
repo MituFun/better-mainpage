@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Github, Globe, Gamepad2, ChevronDown } from 'lucide-react'
+import { Github, Globe, Gamepad2, ChevronDown, BookOpenText } from 'lucide-react'
 import Link from 'next/link'
 import Snowfall from 'react-snowfall'  // Import the snowfall package
 
@@ -12,32 +12,46 @@ const smallNoWrapClass = "whitespace-nowrap text-[clamp(0.75rem,1.5vw,1rem)]";
 
 const greetings = [
     "「嗨，别来无恙啊。」",
-    "「有朋自远方来，不亦说乎？」",
     "「山有木兮木有枝，心悦君兮君不知。」",
-    "「海内存知己，天涯若比邻。」",
     "「花径不曾缘客扫，蓬门今始为君开。」"
 ]
 
 const farewells = [
-    "「莫愁前路无知己，天下谁人不识君。」",
+    "「寄蜉蝣于天地，渺沧海之一粟。」",
     "「路漫漫其修远兮，吾将上下而求索。」",
-    "「人生若只如初见，何事秋风悲画扇。」"
+    "「长风破浪会有时，直挂云帆济沧海。」"
+]
+
+const studys = [
+    "「学而时习之，不亦说乎？」",
+    "「博学之，审问之，慎思之，明辨之，笃行之。」",
+    "「学而不思则罔，思而不学则殆。」",
+    "「不积跬步，无以至千里；不积小流，无以成江海。」"
+]
+
+const tools = [
+    "「工欲善其事，必先利其器。」",
+    "「善用者，事半功倍；不善用者，事倍功半。」"
 ]
 
 export function EnhancedHomepage() {
     const [currentPage, setCurrentPage] = useState(0)
     const [greeting, setGreeting] = useState('')
     const [farewell, setFarewell] = useState('')
+    const [study, setStudy] = useState('');
+    const [tool, setTool] = useState('');
     const [showSecondLine, setShowSecondLine] = useState(false)
     const [showContinuePrompt, setShowContinuePrompt] = useState(false)
 
     useEffect(() => {
         setGreeting(greetings[Math.floor(Math.random() * greetings.length)])
         setFarewell(farewells[Math.floor(Math.random() * farewells.length)])
+        setStudy(studys[Math.floor(Math.random() * studys.length)])
+        setTool(tools[Math.floor(Math.random() * tools.length)])
     }, [])
 
     useEffect(() => {
-        if (currentPage === 1 || currentPage === 2 || currentPage === 3) {
+        if (currentPage === 1 || currentPage === 2 || currentPage === 3 || currentPage === 4) {
             const timer = setTimeout(() => setShowSecondLine(true), 1000)
             return () => clearTimeout(timer)
         }
@@ -48,7 +62,7 @@ export function EnhancedHomepage() {
     }, [currentPage])
 
     const nextPage = () => {
-        setCurrentPage((prev) => (prev < 4 ? prev + 1 : 0));
+        setCurrentPage((prev) => (prev < 5 ? prev + 1 : 0));
         setShowSecondLine(false);
         setShowContinuePrompt(false);
     };
@@ -142,15 +156,15 @@ export function EnhancedHomepage() {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.25 }}
                                 >
-                                    <motion.h2
-                                        className={`${noWrapClass} font-semibold mb-4`}
-                                        initial={{ opacity: 0, scale: 1.5, rotate: -10 }}
-                                        animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                                        transition={{ duration: 0.5 }}
-                                        style={{ textShadow: '0 0 30px rgba(255,255,255,0.6)' }}
+                                    <motion.h1
+                                        className={`${noWrapClass} font-bold mb-4`}
+                                        initial={{ opacity: 0, y: 50 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.1, duration: 0.5 }}
+                                        style={{ textShadow: '0 0 30px rgba(255,255,255,0.7)' }}
                                     >
-                                        「闲坐小窗读周易，不知春去几多时。」
-                                    </motion.h2>
+                                        {study}
+                                    </motion.h1>
                                     <motion.p
                                         className={`${largeNoWrapClass} mb-4`}
                                         style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
@@ -186,7 +200,7 @@ export function EnhancedHomepage() {
                                 transition={{ duration: 0.5 }}
                                 style={{ textShadow: '0 0 30px rgba(255,255,255,0.6)' }}
                             >
-                                「人生得意须尽欢，莫使金樽空对月。」
+                                「逍遥乎天地之间，而心意自得。」
                             </motion.h2>
                             {showSecondLine && (
                                 <motion.div
@@ -204,6 +218,45 @@ export function EnhancedHomepage() {
                     )}
 
                     {currentPage === 4 && (
+                        <>
+                            {showSecondLine && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: 0.25 }}
+                                >
+                                    <motion.h1
+                                        className={`${noWrapClass} font-bold mb-4`}
+                                        initial={{ opacity: 0, y: 50 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.1, duration: 0.5 }}
+                                        style={{ textShadow: '0 0 30px rgba(255,255,255,0.7)' }}
+                                    >
+                                        {tool}
+                                    </motion.h1>
+                                    <motion.p
+                                        className={`${largeNoWrapClass} mb-4`}
+                                        style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
+                                    >
+                                        一些工具
+                                    </motion.p>
+                                    <motion.div
+                                        className="flex flex-col justify-center space-y-4 w-full"
+                                        initial={{ scale: 0 }}
+                                        animate={{ scale: 1 }}
+                                        transition={{ delay: 0.5, type: 'spring', stiffness: 100 }}
+                                    >
+                                        <Link href="https://recite.mitufun.top/" className={`flex items-center justify-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors ${largeNoWrapClass}`}>
+                                            <BookOpenText size={26} />
+                                            <span>背诵工具</span>
+                                        </Link>
+                                    </motion.div>
+                                </motion.div>
+                            )}
+                        </>
+                    )}
+
+                    {currentPage === 5 && (
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                             animate={{ opacity: 1, scale: 1, rotate: 0 }}
