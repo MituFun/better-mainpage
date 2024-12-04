@@ -1,5 +1,5 @@
-import { EnhancedHomepage } from "@/components/EnhancedHomepage";
+import { Main } from "@/components/Main";
 
 export default function Home() {
-    return <EnhancedHomepage />;
+    return <Main />;
 }
