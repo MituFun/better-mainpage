@@ -12,7 +12,6 @@ const smallNoWrapClass = "whitespace-nowrap text-[clamp(0.75rem,1.5vw,1rem)]";
 
 const greetings = [
     "「嗨，别来无恙啊。」",
-    "「山有木兮木有枝，心悦君兮君不知。」",
     "「花径不曾缘客扫，蓬门今始为君开。」"
 ]
 
@@ -23,9 +22,7 @@ const farewells = [
 ]
 
 const studys = [
-    "「学而时习之，不亦说乎？」",
     "「博学之，审问之，慎思之，明辨之，笃行之。」",
-    "「学而不思则罔，思而不学则殆。」",
     "「不积跬步，无以至千里；不积小流，无以成江海。」"
 ]
 
