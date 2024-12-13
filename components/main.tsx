@@ -31,7 +31,7 @@ const tools = [
     "「得其法者事半功倍，不得其法者事倍功半。」"
 ]
 
-export function EnhancedHomepage() {
+export function Homepage() {
     const [currentPage, setCurrentPage] = useState(0)
     const [greeting, setGreeting] = useState('')
     const [farewell, setFarewell] = useState('')
