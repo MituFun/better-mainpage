@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "Hi, I am MituFun.",
+    title: "Hi.",
     icons: {
         icon: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241006111158-M7iJazhAtKmcoM6UuK5nIeoYxacF8j.jpg',
     },
